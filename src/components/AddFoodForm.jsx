@@ -22,16 +22,22 @@ const AddFoodForm = ({ addNewFood }) => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        padding: "16px",
+        borderRadius: "16px",
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+        width: "500px",
+      }}
+    >
       <form
         style={{
           display: "flex",
           flexDirection: "column",
-
           gap: "20px",
         }}
       >
-        <div>
+        <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>
           <label>Name</label>
           <input
             name="name"
@@ -41,7 +47,7 @@ const AddFoodForm = ({ addNewFood }) => {
           ></input>
         </div>
 
-        <div>
+        <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>
           <label>Image</label>
           <input
             name="image"
@@ -51,7 +57,7 @@ const AddFoodForm = ({ addNewFood }) => {
           ></input>
         </div>
 
-        <div>
+        <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>
           <label>Calories</label>
           <input
             name="calories"
@@ -61,7 +67,7 @@ const AddFoodForm = ({ addNewFood }) => {
           ></input>
         </div>
 
-        <div>
+        <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>
           <label>Servings</label>
           <input
             name="servings"

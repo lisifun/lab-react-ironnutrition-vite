@@ -5,7 +5,14 @@ const FoodBox = ({ food, deleteThisFood }) => {
   const { id, name, calories, image, servings } = food;
 
   return (
-    <div style={{ border: "1px solid black", margin: "20px", padding: "20px" }}>
+    <div
+      style={{
+        margin: "16px",
+        padding: "16px",
+        borderRadius: "16px",
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <p>
         <b>{name}</b>
       </p>
