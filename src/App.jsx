@@ -5,12 +5,21 @@ import FoodBox from "./components/FoodBox";
 
 function App() {
   const [foods, setFoods] = useState(foodsJson);
-  console.log(foods);
+
+  const deleteThisFood = (selectedId) => {
+    let udpatedFood = foods.filter((food) => {
+      return food.id !== selectedId;
+    });
+    setFoods(udpatedFood);
+  };
+
   return (
     <div className="App">
       <h1>LAB | React IronNutrition</h1>
       {foods.map((food, index) => {
-        return <FoodBox key={index} food={food} />;
+        return (
+          <FoodBox key={index} food={food} deleteThisFood={deleteThisFood} />
+        );
       })}
     </div>
   );
